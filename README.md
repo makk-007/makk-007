@@ -43,7 +43,7 @@ Built a Python automation tool using Netmiko to manage network devices in a GNS3
 
 Full-stack TypeScript applications built to solve real organizational problems, alongside a systems-level project exploring high-performance infrastructure.
 
-**Aegis** (private repository, in progress)
+- **Aegis** (private repository, in progress)
 A high-performance HTTP reverse proxy and gateway built for routing LLM API traffic. The system splits work across two cooperating planes: a C execution plane handles the hot path (epoll/kqueue event loop, TLS via OpenSSL, HTTP parsing, connection pooling, and SSE streaming passthrough), while a Python control plane handles telemetry ingestion, request trace reconstruction, and latency/throughput/cost metrics. The two planes communicate through a lock-free, single-producer single-consumer ring buffer in POSIX shared memory, allowing the C side to emit telemetry without blocking on Python. Core layers (SHM ring buffer, TLS and event loop wiring, streaming passthrough, and Python-side ingestion) are complete and have been validated with AFL++ fuzzing and Valgrind/MSan memory-safety tooling, which surfaced and fixed real bugs including an HTTP parser buffer overflow and a silent error-suppression bug in the streaming relay. Remaining work covers production hardening: auth/secrets management, rate limiting, circuit breaking, and deployment.
 
 - **Visitor Management System** (private repository, organization project): Digital check-in/check-out system for managing facility visitors.
